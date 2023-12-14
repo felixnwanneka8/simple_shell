@@ -110,6 +110,9 @@ typedef struct builtin
 	int (*func)(info_t *);
 } builtin_table;
 
+/*Debugging my work*/
+int interactive(info_t *info);
+int is_delim(char c, char *delimiters);
 
 /* toem_shloop.c */
 int hsh(info_t *, char **);

@@ -1,6 +1,24 @@
 #include "shell.h"
 
 /**
+ * is_delim - Check if a character is a delimiter.
+ * @c: The character to check.
+ * @delimiters: The string of delimiters.
+ *
+ * Return: 1 if the character is a delimiter, 0 otherwise.
+ */
+int is_delim(char c, char *delimiters)
+{
+    while (*delimiters != '\0')
+    {
+        if (c == *delimiters)
+            return 1;
+        delimiters++;
+    }
+    return 0;
+}
+
+/**
  * **strtow - splits a string into words. Repeat delimiters are ignored
  * @str: the input string
  * @d: the delimeter string

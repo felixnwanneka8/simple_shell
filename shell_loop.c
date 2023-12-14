@@ -1,6 +1,19 @@
 #include "shell.h"
 
 /**
+ * interactive - Check if the shell is running in interactive mode.
+ * @info: Pointer to the info_t structure.
+ *
+ * Return: 1 if in interactive mode, 0 otherwise.
+ */
+int interactive(info_t *info)
+{
+	 /* Avoid unused parameter warning */
+    (void)info;
+    return isatty(STDIN_FILENO);
+}
+
+/**
  * hsh - main shell loop
  * @info: the parameter & return info struct
  * @av: the argument vector from main()
